@@ -50,7 +50,7 @@ pip install -r requirements.txt
 
 ##############################################################################################
 API Endpoints
-1) Add Flashcard : POST /flashcard/
+1) Add Flashcard : POST:http://127.0.0.1:8000/flashcard
 {
   "student_id": "stu001",
   "question": "What is photosynthesis?",
@@ -61,7 +61,7 @@ Response:{
   "subject": "Biology"
 }
 Get Flashcards
-2)GET /get-subject?student_id=stu001&limit=3
+2)GET :http://127.0.0.1:8000/get-subject?student_id=stu001&limit=4 
 Response:[
     {
         "student_id": "stu001",
