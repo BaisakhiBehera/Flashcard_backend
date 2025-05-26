@@ -47,3 +47,44 @@ pip install -r requirements.txt
 
 
 🏃 Running the Server : python manage.py runserver
+
+##############################################################################################
+API Endpoints
+1) Add Flashcard : POST /flashcard/
+{
+  "student_id": "stu001",
+  "question": "What is photosynthesis?",
+  "answer": "A process used by plants to convert light into energy"
+}
+Response:{
+  "message": "Flashcard added successfully",
+  "subject": "Biology"
+}
+Get Flashcards
+2)GET /get-subject?student_id=stu001&limit=3
+Response:[
+    {
+        "student_id": "stu001",
+        "question": "What is an acid-base reaction?",
+        "answer": "A chemical reaction that occurs between an acid and a base",
+        "subject": "Chemistry"
+    },
+    {
+        "student_id": "stu001",
+        "question": "What is photosynthesis?",
+        "answer": "Photosynthesis is the process through which plants make food using sunlight.",
+        "subject": "Biology"
+    },
+    {
+        "student_id": "stu001",
+        "question": "What is Newton's Second Law?",
+        "answer": "Force equals mass times acceleration",
+        "subject": "Physics"
+    },
+    {
+        "student_id": "stu001",
+        "question": "What is the Pythagorean theorem?",
+        "answer": "a² + b² = c²",
+        "subject": "General"
+    }
+]
